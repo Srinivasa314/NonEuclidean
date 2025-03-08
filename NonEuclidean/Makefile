@@ -35,7 +35,7 @@ clean:
 	rm ${OBJS}
 
 ${EXE}: ${OBJS}
-	${LINK} ${LINKFLAGS} $^ -o ${EXE}
+	${LINK} $^ ${LINKFLAGS} -o ${EXE}
 
 %.o : %.cpp ${HEADERS}
 	${CXX} ${CXXFLAGS} $*.cpp -o $*.o
